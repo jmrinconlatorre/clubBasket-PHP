@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Categoria</th>
+                <th scope="col">Sexo</th>
+                <th scope="col">Número de jugadores</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for equipo in equipos %}
+                <tr>
+                    <td>{{equipo.id}}
+                    </td>
+                    <td>{{equipo.categoria}}
+                    </td>
+                    <td>{{equipo.sexo}}
+                    </td>
+                    <td>{{equipo.numjugadores}}
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

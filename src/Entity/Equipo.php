@@ -151,4 +151,10 @@ class Equipo
 
         return $this;
     }
+
+    //esto lo ponemos porque al renderizar nos da un error
+    public function __toString()
+    {
+        return $this->categoria;
+    }
 }
